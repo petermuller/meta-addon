@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
 SRC_URI = "file://runme.sh \
 	file://COPYING.MIT \
-	file://seabios.tar.gz \
+	file://seabios.tar.gz.txt \
 	"
 
 PACKAGES = "\
