@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mkdir /var/log/xen
+tar -xvzf seabios.tar.gz
 
