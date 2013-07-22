@@ -1,18 +1,20 @@
 DESCRIPTION = "Xen Image Addons"
 HOMEPAGE = "http://github.com/petermuller/meta-addon"
-LICENSE = "GPLv2"
+LICENSE = "MIT"
 SECTION = "console/tools"
 PR = "r0"
 
-LIC_FILES_CHKSUM = "file://COPYING;md5=e0f0f3ac55608719a82394cc353928df"
+LIC_FILES_CHKSUM = "file://COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
-SRC_URI = "file://runme.sh"
-
-PACKAGES = "\
-	${PN}-base \
+SRC_URI = "file://runme.sh \
+	file://COPYING.MIT \
 	"
 
-FILES_${PN}-base += "\
+PACKAGES = "\
+	${PN} \
+	"
+
+FILES_${PN} += "\
 	/home/root \
 	/home/root/runme.sh \
 	"
