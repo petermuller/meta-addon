@@ -15,6 +15,8 @@ SRC_URI[sha256sum] = "2762c5056da9cad463086e5588f9194425ac4d664b9b5f3d00e63950c3
 
 S = "${WORKDIR}/${PN}-${PV}"
 
+inherit autotools
+
 DEPENDS = "iasl"
 
 PACKAGES = "\
@@ -22,5 +24,15 @@ PACKAGES = "\
 	"
 
 FILES_${PN} = "\
-	
+	/home/root/ \
+	/home/root/bios.bin.elf \
 	"
+
+do_compile() {
+	oe_runmake()
+}
+
+do_install(){
+	install -m 0755 -d ${D}/home/root
+	install -m 0755 ${S}/out/bios.bin.elf ${D}/home/root/
+}
