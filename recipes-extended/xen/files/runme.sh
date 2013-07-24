@@ -1,5 +1,7 @@
 #!/bin/bash
 
-mv seabios.tar.gz.txt seabios.tar.gz
-tar -xvzf seabios.tar.gz
-
+#Configure bridge
+ifconfig eth0 up
+brctl addbr xenbr0
+brctl addif xenbr0 eth0
+udhcpc -i xenbr0
