@@ -28,9 +28,6 @@ FILES_${PN} = "\
 	"
 
 do_compile(){
-	mkdir -p ${S}/out/tools/kconfig/lsdialog
-	mkdir -p ${S}/out/include/config
-	make -C out/ -f ${S}/tools/kconfig/Makefile srctree=${S} src=tools/kconfig obj=tools/kconfig Q= Kconfig=${S}/src/Kconfig defconfig
 	make
 }
 
