@@ -27,5 +27,6 @@ do_configure_prepend() {
 }
 
 do_install() {
+	install -m 0755 -d ${D}/etc/init.d/
 	install -m 0755 ${WORKDIR}/bridge-setup ${D}/etc/init.d/
 }
