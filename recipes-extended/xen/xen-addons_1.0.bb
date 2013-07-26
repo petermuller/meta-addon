@@ -21,10 +21,6 @@ FILES_${PN} += "\
 	/home/root/vmlinux \
 	"
 
-INITSCRIPT_PACKAGES = "${PN}"
-INITSCRIPT_NAME_${PN} = "bridge-setup"
-INITSCRIPT_PARAMS_${PN} = "defaults 84"
-
 do_configure_prepend() {
 	cp ${WORKDIR}/COPYING.MIT ${S}/COPYING.MIT
 }
