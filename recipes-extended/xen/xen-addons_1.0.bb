@@ -7,7 +7,6 @@ PR = "r0"
 LIC_FILES_CHKSUM = "file://COPYING.MIT;md5=838c366f69b72c5df05c96dff79b35f2"
 
 SRC_URI = "file://runme.sh \
-	file://vmlinux \
 	file://COPYING.MIT \
 	"
 
@@ -18,7 +17,6 @@ PACKAGES = "\
 FILES_${PN} += "\
 	/home/root \
 	/home/root/runme.sh \
-	/home/root/vmlinux \
 	"
 
 do_configure_prepend() {
@@ -28,5 +26,4 @@ do_configure_prepend() {
 do_install() {
 	install -m 0755 -d ${D}/home/root
 	install -m 0755 ${WORKDIR}/runme.sh ${D}/home/root
-	install -m 0644 ${WORKDIR}/vmlinux ${D}/home/root
 }
