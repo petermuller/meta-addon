@@ -8,6 +8,7 @@ LIC_FILES_CHKSUM = "file://COPYING.MIT;md5=838c366f69b72c5df05c96dff79b35f2"
 
 SRC_URI = "file://bridgesetup.sh \
 	file://vmlaunch.sh \
+	file://replacefs.sh
 	file://COPYING.MIT \
 	"
 
@@ -19,6 +20,7 @@ FILES_${PN} += "\
 	/home/root \
 	/home/root/bridgesetup.sh \
 	/home/root/vmlaunch.sh \
+	/home/root/replacefs.sh \
 	"
 
 do_configure_prepend() {
@@ -29,4 +31,5 @@ do_install() {
 	install -m 0755 -d ${D}/home/root
 	install -m 0755 ${WORKDIR}/bridgesetup.sh ${D}/home/root
 	install -m 0755 ${WORKDIR}/vmlaunch.sh ${D}/home/root
+	install -m 0755 ${WORKDIR}/replacefs.sh ${D}/home/root
 }
