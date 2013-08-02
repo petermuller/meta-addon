@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://COPYING.MIT;md5=838c366f69b72c5df05c96dff79b35f2"
 
 SRC_URI = "file://bridgesetup.sh \
 	file://vmlaunch.sh \
-	file://replacefs.sh
+	file://replacefs.sh \
 	file://COPYING.MIT \
 	"
 
