@@ -6,3 +6,4 @@ cd /storage
 xl create ubuntu.cfg
 xl create centos.cfg
 xl create debian.cfg
+xl create windows.cfg
